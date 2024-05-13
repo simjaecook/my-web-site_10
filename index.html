@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LOL_champion</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black; color: white;">
+  <input id="night_day" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+
+  if(this.value == 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }    
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+      alist[i].style.color = 'blue';
+      i = i + 1;
+    }  
+  }  
+  "> 
+  <h1>리그 오브 레전드</h1>
+  <h2>챔피언 목록</h2>
+  <ul>
+    <script>
+      champion = ['가렌', '야스오', '티모']
+      img = ["가렌.webp","야스오.webp","티모.webp"]
+      var i = 0;
+      while (i < champion.length) {
+        document.write('<li>' + champion[i] + '</li>');
+        document.write('<img src=img[i]>');
+        i = i + 1;
+      }
+
+    </script>
+  </ul>
+</body>
+</html>
